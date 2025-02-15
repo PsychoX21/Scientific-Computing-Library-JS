@@ -32,11 +32,11 @@ export class ODEApplications {
         let x0 = 0, y0 = 0;
 
         const f_x = (t, x, vx) => {
-            return [vx, -k * vx];
+            return [-k * vx];
         };
 
         const f_y = (t, y, vy) => {
-            return [vy, -g - k * vy];
+            return [-g - k * vy];
         };
 
         let xResult = ODESolvers.rk4_2nd(f_x, x0, vx0, 0, steps * h, h, verbose);
