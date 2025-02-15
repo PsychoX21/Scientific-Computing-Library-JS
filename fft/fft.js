@@ -1,4 +1,4 @@
-export class Complex {
+class Complex {
     constructor(real, imag) {
         this.real = real;
         this.imag = imag;
@@ -28,7 +28,7 @@ export class Complex {
     }
 }
 
-export class FFT {
+class FFT {
     static omega(n, k) {
         let angle = (2 * Math.PI * k) / n;
         return new Complex(Math.cos(angle), Math.sin(angle));
@@ -59,3 +59,5 @@ export class FFT {
         return a.map(c => new Complex(c.real / n, c.imag / n));
     }
 }
+
+export { Complex, FFT };
